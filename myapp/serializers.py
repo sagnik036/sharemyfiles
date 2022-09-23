@@ -13,7 +13,7 @@ class FileListSerilizer(serializers.Serializer):
     folder = serializers.CharField(required = False)
 
     def zip_files(self,folder):
-        shutil.make_archive(f"public/static/zip/{folder}",'zip','https://sharemyfiles.herokuapp.com/public/static/{folder}')
+        shutil.make_archive(f"public/static/zip/{folder}",'zip',f"public/static/{folder}")
 
     def create(self , validated_data):
         folder = Folder.objects.create()
