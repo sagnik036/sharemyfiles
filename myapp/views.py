@@ -9,7 +9,7 @@ class handleFileUpload(GenericAPIView):
     serializer_class = FileListSerilizer
     parser_classes = [MultiPartParser]
     def post (self,request):
-        try:
+        # try:
             data = request.data
             serializer = FileListSerilizer(data = data)
             if serializer.is_valid():
@@ -28,6 +28,8 @@ class handleFileUpload(GenericAPIView):
                 }
             return Response(response,status=400)
 
-        except Exception as e:
-            print(e)
+        # except Exception as e:
+        #     response ={
+                  
+        #     }
             
