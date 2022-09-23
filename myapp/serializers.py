@@ -28,5 +28,5 @@ class FileListSerilizer(serializers.Serializer):
         
         self.zip_files(folder.uid)
         
-        link = 'http://127.0.0.1:8000/media/zip/'
+        link = 'https://sharemyfiles.herokuapp.com/media/zip/'
         return {'files' : {} , 'folder' : link + str(folder.uid)+'.zip'}
