@@ -1,0 +1,4 @@
+django==3.2.0
+djangorestframework
+django_on_heroku
+gunicorn==20.1.0
